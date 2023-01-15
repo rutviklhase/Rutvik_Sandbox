@@ -10,7 +10,6 @@ interface Props{
 
 export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc}) => {
     
-    
     return(
         <>
             <div>

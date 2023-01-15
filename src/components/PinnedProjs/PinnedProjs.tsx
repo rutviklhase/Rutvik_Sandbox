@@ -7,11 +7,6 @@ export const PinnedProjs: React.FC = () =>
     const [pinnedProjs, setPinnedProjs] = useState<any[]>([]);
     const [projects, setProjects] = useState<any[]>([]);
 
-    // useEffect(() => {
-    //     fetch('https://gh-pinned-repos.egoist.dev/?username=rutviklhase')
-    //     .then((res)=>res.json())
-    //     .then((data)=>{setPinnedProjs(data); console.log(data);}) 
-    // },[]);
     var requestOptions = {
         'content-type':'application/json',
         method:'GET'
@@ -29,10 +24,10 @@ export const PinnedProjs: React.FC = () =>
     return(
             <> 
                 <div>
-                    {pinnedProjs.map
-                    (home => 
+                    {projects.map
+                    (project => 
                         <div>
-                            <Project imageUrl="asdf" projectDesc={home.owner} projectName={home.repo}/>
+                            <Project imageUrl="asdf" projectDesc={project.owner} projectName={project.repo}/>
                         </div>
                     )}
                 </div>
