@@ -9,27 +9,25 @@ app.use(cors());
 const port = 3001
 
 function getProjectList(){
-
     axios.get('https://gh-pinned-repos.egoist.dev/?username=rutviklhase')
     .then(function (response) {
-        // console.log(response);
         data = response.data;
+        console.log(data);
         return data;
       });
-    
+     
 }
 
-
-
-
 app.get('/projects', async (req, res) => {
-    var ProjectList = await getProjectList();
+    res.set({"Content-Type":"application/json","Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true});
+    
+    var ProjectList = getProjectList();
     for(var i in ProjectList )
     {
         console.log("sanity check");
     }
     // console.log("sanity check");
-    console.log(ProjectList)
+    // console.log(ProjectList)
   res.send(ProjectList);
 })
 

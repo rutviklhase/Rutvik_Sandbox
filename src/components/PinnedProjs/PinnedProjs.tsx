@@ -7,16 +7,20 @@ export const PinnedProjs: React.FC = () =>
     const [pinnedProjs, setPinnedProjs] = useState<any[]>([]);
     const [projects, setProjects] = useState<any[]>([]);
 
+    // useEffect(() => {
+    //     fetch('https://gh-pinned-repos.egoist.dev/?username=rutviklhase')
+    //     .then((res)=>res.json())
+    //     .then((data)=>{setPinnedProjs(data); console.log(data);}) 
+    // },[]);
+    var requestOptions = {
+        'content-type':'application/json',
+        method:'GET'
+    };
     useEffect(() => {
-        fetch('https://gh-pinned-repos.egoist.dev/?username=rutviklhase')
+        fetch('http://localhost:3001/projects',requestOptions)
         .then((res)=>res.json())
-        .then((data)=>{setPinnedProjs(data); console.log(data);}) 
-    },[]);
-
-    useEffect(() => {
-        fetch('http://localhost:3001/projects')
-        .then((res)=>res.json())
-        .then((data)=>{setProjects(data); console.log(data);}) 
+        .then((data)=>{setProjects(data); 
+            console.log(data);}) 
     },[]);
 
 
