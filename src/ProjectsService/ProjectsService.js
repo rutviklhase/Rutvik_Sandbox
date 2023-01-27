@@ -6,22 +6,27 @@ const express = require('express');
 const { default: axios } = require('axios');
 const app = express()
 app.use(cors());
-const port = 3001
+const port = 3001;
 
 async function getProjectList(){
    const response = axios.get('https://gh-pinned-repos.egoist.dev/?username=rutviklhase');
-   console.log(response);
+  //  console.log(response);
    return response;     
 }
 
 async function getProjectImagesUrl(repoName){
-  const url = `https://raw.githubusercontent.com/rutviklhase/${repoName}/main/my-app/src/assets/exampleimage.jpg`;
+  return url = `https://raw.githubusercontent.com/rutviklhase/${repoName}/main/ShowcaseImage.jpg`;
 }
 
 app.get('/projects', async (req, res) => {
     res.set({"Content-Type":"application/json","Access-Control-Allow-Origin":"*","Access-Control-Allow-Credentials":true});
     var ProjectList = await getProjectList();
-    console.log(ProjectList);
+
+    for (var i in ProjectList.data){
+      ProjectList.data[i].image= await getProjectImagesUrl(ProjectList.data[i].repo);
+      console.log(ProjectList.data[i].image);
+    }
+    // console.log(ProjectList);
     res.send(ProjectList.data);
 })
 

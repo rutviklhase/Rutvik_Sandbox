@@ -23,11 +23,11 @@ export const PinnedProjs: React.FC = () =>
     
     return(
             <> 
-                <div>
+                <div className="ProjectsList">
                     {projects.map
                     (project => 
                         <div>
-                            <Project imageUrl="asdf" projectDesc={project.owner} projectName={project.repo}/>
+                            <Project imageUrl={project.image} projectDesc={project.description} projectName={project.repo}/>
                         </div>
                     )}
                 </div>
