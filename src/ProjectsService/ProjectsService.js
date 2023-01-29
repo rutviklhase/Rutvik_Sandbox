@@ -10,7 +10,7 @@ const port = 3001;
 
 async function getProjectList(){
    const response = axios.get('https://gh-pinned-repos.egoist.dev/?username=rutviklhase');
-  //  console.log(response);
+  
    return response;     
 }
 
