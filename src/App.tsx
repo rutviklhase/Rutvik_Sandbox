@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { PinnedProjs } from './components/PinnedProjs/PinnedProjs';
+import {NavBar} from './components/NavBar/NavBar';
 
 function App() {
   // const [response, setResponse] = useState([]);
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar/>
       <PinnedProjs/>
       {/* <img src='https://raw.githubusercontent.com/rutviklhase/RutvikSandbox/main/my-app/src/assets/exampleimage.jpg'/> */}
     </div>

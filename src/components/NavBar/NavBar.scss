@@ -1,0 +1,19 @@
+.NavBar{
+    ul{
+        list-style-type: none;
+        display: flex;
+        background-color: black;
+        margin: 0px;
+        height: 10vh;
+        color: white;
+        flex-direction: row-reverse;
+        li{
+            padding-left: 3vw;
+            padding-top: 3vh;
+        }
+        font-size: 2vh;
+        padding-right: 5vw;
+        
+    }
+    font-family: Poppins;
+}

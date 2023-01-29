@@ -22,16 +22,17 @@ export const PinnedProjs: React.FC = () =>
 
     
     return(
-            <> 
+            <div className="PinnedProjects"> 
+                <h2 className="PinnedHead">Pinned Projects :</h2>
                 <div className="ProjectsList">
                     {projects.map
                     (project => 
                         <div>
-                            <Project imageUrl={project.image} projectDesc={project.description} projectName={project.repo}/>
+                            <Project imageUrl={project.image} projectDesc={project.description} projectName={project.repo} link={project.link}/>
                         </div>
                     )}
                 </div>
-            </>
+            </div>
             )
        
 }

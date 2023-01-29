@@ -14,21 +14,23 @@ interface Props{
     imageUrl: string;
     projectName?: string; 
     projectDesc?: string;
+    link?: string;
 }
 
-export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc}) => {
+export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc,link}) => {
     
     return(
         <>  
             <div className="Project">
-                <Card sx={{width: "15vw", backgroundColor: "black", height: "30vh", color:"white"}}>
+                <a href={link}>
+                <Card sx={{width: "15vw", backgroundColor: "#1E1E1E", height: "25vh", color:"white"}}>
                     <CardMedia 
                         sx={{height: "15vh"}} 
                         image={imageUrl} 
                         title={projectName}
                     />
                     <CardContent>
-                        <Typography sx={{fontFamily:"Roboto"}} gutterBottom variant="h6" component="div">
+                        <Typography sx={{fontFamily:"Poppins", textDecoration: "none"}} gutterBottom variant="h6" component="div">
                             {projectName}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -37,6 +39,8 @@ export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc}) =
                     </CardContent>
                    
                 </Card>
+                </a>
+                
             </div>
         </>
     )
