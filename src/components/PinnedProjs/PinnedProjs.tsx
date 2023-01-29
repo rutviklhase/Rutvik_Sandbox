@@ -6,6 +6,9 @@ export const PinnedProjs: React.FC = () =>
 {
     const [pinnedProjs, setPinnedProjs] = useState<any[]>([]);
     const [projects, setProjects] = useState<any[]>([]);
+    const [SelectedProject, setSelectedProject] = useState<any[]>([]);
+    const [SelectedDesc, setSelectedDesc] = useState<any[]>([]);
+    const [SelectedName, setSelectedName] = useState<any[]>([]);
 
     var requestOptions = {
         'content-type':'application/json',
@@ -23,7 +26,7 @@ export const PinnedProjs: React.FC = () =>
     
     return(
             <div className="PinnedProjects"> 
-                <h2 className="PinnedHead">Pinned Projects :</h2>
+                <h3 className="PinnedHead">Pinned Projects :</h3>
                 <div className="ProjectsList">
                     {projects.map
                     (project => 

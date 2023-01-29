@@ -22,7 +22,7 @@ export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc,lin
     return(
         <>  
             <div className="Project">
-                <a href={link}>
+                
                 <Card sx={{width: "15vw", backgroundColor: "#1E1E1E", height: "25vh", color:"white"}}>
                     <CardMedia 
                         sx={{height: "15vh"}} 
@@ -34,12 +34,14 @@ export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc,lin
                             {projectName}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {projectDesc}
+                            {projectDesc} <br/>
+                            <a href={link}>Learn More</a>
                         </Typography>
+                        
                     </CardContent>
                    
                 </Card>
-                </a>
+        
                 
             </div>
         </>
