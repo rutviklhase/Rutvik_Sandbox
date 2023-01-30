@@ -17,6 +17,5 @@ jobs:
 
       - run: |
           npm i
-          npm run begin
           npm run build
 
