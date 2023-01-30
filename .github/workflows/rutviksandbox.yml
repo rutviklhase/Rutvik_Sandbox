@@ -19,5 +19,5 @@ jobs:
           npm i
           cd src/ProjectsService
           npm i
-          npm run begin
+          node ProjectsService.js
 
