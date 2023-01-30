@@ -1,6 +1,6 @@
 import ('node-fetch')
-const path = require('path')
-const bodyParser = require('body-parser')
+// const path = require('path')
+// const bodyParser = require('body-parser')
 const cors = require('cors');
 const express = require('express');
 const { default: axios } = require('axios');
