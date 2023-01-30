@@ -16,8 +16,7 @@ jobs:
         uses: actions/setup-node@v1
 
       - run: |
-          npm i
           cd src/ProjectsService
-          npm i
+          npm install
           node ProjectsService.js
 
