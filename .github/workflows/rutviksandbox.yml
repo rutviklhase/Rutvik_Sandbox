@@ -2,9 +2,15 @@ name: rutviksandbox
 
 on: 
   push:
+<<<<<<< HEAD
     branches: [ main ]
   pull_request:
     branches: [ main ]
+=======
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+>>>>>>> 2ec7c887dae0e0ac2aa1e442c60f30cc56e73920
 
 jobs:
   build: 
