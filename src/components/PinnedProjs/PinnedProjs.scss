@@ -1,10 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
 .PinnedProjects{
+    z-index: -9999;
+    color: white;
+    background-color: aqua;
     padding-left: 9vw;
     .ProjectsList{
-        display: flex;
-        flex-wrap: wrap;
-
-        .Project{
+        
+.Project{
             padding: 0 3vw;
             padding-top: 3vh;
         }
@@ -13,6 +15,7 @@
         color:white;
         text-align: left;
         padding-left: 3vw;
+        font-size: 3vh;
     
     }
     font-family: Poppins;

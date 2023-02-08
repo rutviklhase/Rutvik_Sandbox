@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { PinnedProjs } from './components/PinnedProjs/PinnedProjs';
 import {NavBar} from './components/NavBar/NavBar';
 

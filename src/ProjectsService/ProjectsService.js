@@ -6,7 +6,7 @@ const express = require('express');
 const { default: axios } = require('axios');
 const app = express()
 app.use(cors());
-const port = 5000;
+const port = 5001;
 //comment
 async function getProjectList(){
    const response = axios.get('https://gh-pinned-repos.egoist.dev/?username=rutviklhase');
@@ -31,5 +31,5 @@ app.get('/projects', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Projects Service listening on port ${port}`)
 })

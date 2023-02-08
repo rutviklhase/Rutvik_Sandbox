@@ -1,4 +1,7 @@
 .NavBar{
+    position: fixed;
+    top:0;
+    width: 100%;
     ul{
         list-style-type: none;
         display: flex;
@@ -20,5 +23,6 @@
         padding-right: 85vw;
         padding-top: 3.5vh;
         position: absolute;
+        width: 7vw;
     }
 }

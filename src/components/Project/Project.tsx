@@ -8,6 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
+import { Carousel } from "@trendyol-js/react-carousel";
 
 
 interface Props{
@@ -30,7 +31,7 @@ export const Project: React.FC<Props> = ({imageUrl, projectName, projectDesc,lin
                         title={projectName}
                     />
                     <CardContent>
-                        <Typography sx={{fontFamily:"Poppins", textDecoration: "none"}} gutterBottom variant="h6" component="div">
+                        <Typography sx={{fontFamily:"Poppins", textDecoration: "none", fontSize: "2vh"}} gutterBottom variant="h6" component="div">
                             {projectName}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">

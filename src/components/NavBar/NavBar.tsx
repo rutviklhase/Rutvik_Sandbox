@@ -7,10 +7,11 @@ export const NavBar: React.FC=()=>
     <>
         <nav className="NavBar">
             <ul>
-                <li>My Projects</li>
-                <li>My Contributions</li>
-                <li>My Artworks</li>
                 <li>About This Website</li>
+                <li>My Blogs</li>
+                <li>My Artworks</li>
+                <li>My Contributions</li>
+                <li>My Projects</li>
                 <img src={Logo} className="Logo"/>
             </ul>
             

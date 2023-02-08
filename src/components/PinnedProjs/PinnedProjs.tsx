@@ -1,6 +1,9 @@
+import { Carousel } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import { Project } from "../Project/Project";
 import "./PinnedProjs.scss";
+import image from "../../assets/logo.png"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const PinnedProjs: React.FC = () =>
 {
@@ -15,7 +18,7 @@ export const PinnedProjs: React.FC = () =>
         method:'GET'
     };
     useEffect(() => {
-        fetch('http://localhost:3001/projects',requestOptions)
+        fetch('http://localhost:5001/projects',requestOptions)
         .then((res)=>res.json())
         .then((data)=>{setProjects(data); 
             console.log(data);}) 
@@ -26,15 +29,20 @@ export const PinnedProjs: React.FC = () =>
     
     return(
             <div className="PinnedProjects"> 
-                <h3 className="PinnedHead">Pinned Projects :</h3>
+                {/* <h3 className="PinnedHead">Pinned Projects :</h3>
                 <div className="ProjectsList">
-                    {projects.map
-                    (project => 
-                        <div>
-                            <Project imageUrl={project.image} projectDesc={project.description} projectName={project.repo} link={project.link}/>
-                        </div>
-                    )}
-                </div>
+                    <Carousel>
+                        {projects.map(project=>(
+                            <Carousel.Item key={project.key}>
+                                <img src={image}/>
+                                <Carousel.Caption>
+                                    <h3>{project.repo}</h3>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                    
+                </div> */}
             </div>
             )
        
