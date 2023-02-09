@@ -1,18 +1,14 @@
 import React from "react";
-import { isPropertySignature } from "typescript";
 import "./Project.scss"
 import { Card } from "@mui/material";
-import CardActions from "@mui/material/CardActions";
-import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
-import { Carousel } from "@trendyol-js/react-carousel";
+
 
 
 interface Props{
-    imageUrl: string;
+    imageUrl?: string;
     projectName?: string; 
     projectDesc?: string;
     link?: string;

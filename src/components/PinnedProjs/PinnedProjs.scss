@@ -1,22 +1,41 @@
-@import "~bootstrap/scss/bootstrap";
+
 .PinnedProjects{
-    z-index: -9999;
-    color: white;
-    background-color: aqua;
-    padding-left: 9vw;
-    .ProjectsList{
-        
-.Project{
-            padding: 0 3vw;
-            padding-top: 3vh;
+    .button{
+        width: 100px;
+    }
+    .carousel{
+        background-color: rgb(38, 38, 38);
+        .carousel-indicators{
+            padding-bottom: 2vh;
+            
+            button{
+                background-color: rgb(137, 137, 137);
+                border: 0;
+                width: 2vw;
+            }
+            button.active{
+                background-color: rgb(255, 254, 254);
+             }
         }
     }
-    .PinnedHead{
-        color:white;
-        text-align: left;
-        padding-left: 3vw;
-        font-size: 3vh;
-    
-    }
     font-family: Poppins;
+    padding-top: 15vh;
+    color: white;
+    .Selector{
+        background-color: black;
+        .PinnedHead{
+            text-align: left;
+            font-size: 3vh;
+            padding-left: 5vw;;
+            padding-top: 2vh;
+        }
+        .projectImage{
+            width: 100%;
+            max-width: 10vw;
+            visibility: hidden;
+        }
+    }
+    
+  
+    
 }

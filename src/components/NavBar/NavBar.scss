@@ -2,10 +2,10 @@
     position: fixed;
     top:0;
     width: 100%;
+    z-index: 9999;
     ul{
         list-style-type: none;
         display: flex;
-        background-color: black;
         margin: 0px;
         height: 10vh;
         color: white;
@@ -20,9 +20,7 @@
     }
     font-family: Poppins;
     .Logo{
-        padding-right: 85vw;
-        padding-top: 3.5vh;
-        position: absolute;
-        width: 7vw;
+        padding-right: 28vw;
+
     }
 }

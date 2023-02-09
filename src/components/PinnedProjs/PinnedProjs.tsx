@@ -1,17 +1,18 @@
-import { Carousel } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
 import React, { useEffect, useState } from "react";
 import { Project } from "../Project/Project";
 import "./PinnedProjs.scss";
-import image from "../../assets/logo.png"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import image from "../../assets/bs.png"
+import { SelectedProjectComponent } from "../SelectedProject/SelectedProjectComponent";
 
 export const PinnedProjs: React.FC = () =>
 {
     const [pinnedProjs, setPinnedProjs] = useState<any[]>([]);
     const [projects, setProjects] = useState<any[]>([]);
-    const [SelectedProject, setSelectedProject] = useState<any[]>([]);
-    const [SelectedDesc, setSelectedDesc] = useState<any[]>([]);
-    const [SelectedName, setSelectedName] = useState<any[]>([]);
+    const [SelectedProject, setSelectedProject] = useState<any>("Rutvik-Sandbox");
+    const [SelectedDesc, setSelectedDesc] = useState<any>("This Website.");
+    const [SelectedLink, setSelectedLink] = useState<any>("Project Link");
+
 
     var requestOptions = {
         'content-type':'application/json',
@@ -24,25 +25,36 @@ export const PinnedProjs: React.FC = () =>
             console.log(data);}) 
     },[]);
 
-
+    function changeProject(projIdx : any){
+        setSelectedProject(projects[projIdx].repo);
+        setSelectedDesc(projects[projIdx].description ? projects[projIdx].description : "A project created by Rutvik."  )
+        setSelectedLink(projects[projIdx].link);
+    }
 
     
     return(
             <div className="PinnedProjects"> 
-                {/* <h3 className="PinnedHead">Pinned Projects :</h3>
+            <div className="Selector">
+
+            
+                <h3 className="PinnedHead">Pinned Projects</h3>
                 <div className="ProjectsList">
-                    <Carousel>
+                    <Carousel onSlid={changeProject} interval={null} fade={true} variant={"dark"} indicators={true}>
                         {projects.map(project=>(
                             <Carousel.Item key={project.key}>
-                                <img src={image}/>
+                                <img src={image} alt={project.repo} className="projectImage"/>
                                 <Carousel.Caption>
                                     <h3>{project.repo}</h3>
                                 </Carousel.Caption>
                             </Carousel.Item>
                         ))}
                     </Carousel>
+                </div>
+                <div className="SelectedProjectContainer">
+                    <SelectedProjectComponent repoName = {SelectedProject} projectDesc = {SelectedDesc} link ={SelectedLink}/>
+                </div>
                     
-                </div> */}
+                </div>
             </div>
             )
        

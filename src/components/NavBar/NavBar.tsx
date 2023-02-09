@@ -7,6 +7,7 @@ export const NavBar: React.FC=()=>
     <>
         <nav className="NavBar">
             <ul>
+                <li>About Me</li>
                 <li>About This Website</li>
                 <li>My Blogs</li>
                 <li>My Artworks</li>
