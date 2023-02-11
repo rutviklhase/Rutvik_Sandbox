@@ -12,7 +12,7 @@ export const PinnedProjs: React.FC = () =>
     const [SelectedProject, setSelectedProject] = useState<any>("Rutvik-Sandbox");
     const [SelectedDesc, setSelectedDesc] = useState<any>("This Website.");
     const [SelectedLink, setSelectedLink] = useState<any>("Project Link");
-
+    const [SelectedImage, setSelectedImage] = useState<any>("");
 
     var requestOptions = {
         'content-type':'application/json',
@@ -29,6 +29,8 @@ export const PinnedProjs: React.FC = () =>
         setSelectedProject(projects[projIdx].repo);
         setSelectedDesc(projects[projIdx].description ? projects[projIdx].description : "A project created by Rutvik."  )
         setSelectedLink(projects[projIdx].link);
+        setSelectedImage(projects[projIdx].image);
+        console.log(SelectedImage);
     }
 
     
@@ -51,7 +53,7 @@ export const PinnedProjs: React.FC = () =>
                     </Carousel>
                 </div>
                 <div className="SelectedProjectContainer">
-                    <SelectedProjectComponent repoName = {SelectedProject} projectDesc = {SelectedDesc} link ={SelectedLink}/>
+                    <SelectedProjectComponent repoName = {SelectedProject} projectDesc = {SelectedDesc} link ={SelectedLink} image={SelectedImage}/>
                 </div>
                     
                 </div>
