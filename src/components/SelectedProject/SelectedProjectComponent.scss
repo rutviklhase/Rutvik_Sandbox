@@ -1,11 +1,14 @@
 .SelectedProjectComponent{
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+.SelectedProjectName{
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    z-index: 9999;
+}
+.SelectedProjectLink{
     padding-top: 10vh;
-    .SelectedProjectName{
-        padding-bottom: 5vh;
-        padding-top: 5vh;
-    }
-    .SelectedProjectLink{
-        padding-top: 10vh;
-        padding-bottom: 3vh;
-    }
+    padding-bottom: 3vh;
+    z-index: 9999;
 }

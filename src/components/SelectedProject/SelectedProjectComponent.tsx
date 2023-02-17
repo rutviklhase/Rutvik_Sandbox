@@ -12,7 +12,7 @@ interface SelectedProjectProps{
 export const SelectedProjectComponent : React.FC<SelectedProjectProps> = ({repoName, projectDesc, link,image}) => {
     return(
         <>
-        <div className="SelectedProjectComponent" style={{backgroundImage:`url(${image})`, backgroundRepeat:"no-repeat"}}>
+        <div className="SelectedProjectComponent" style={{backgroundImage:`url(${image})`}} >
             <h1 className="SelectedProjectName">{repoName}</h1>
             <h4 className="SelectedProjectDesc">{projectDesc}</h4>
             <h5 className="SelectedProjectLink"><a href={link}>View On GitHub</a></h5>

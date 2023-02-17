@@ -19,7 +19,7 @@ export const PinnedProjs: React.FC = () =>
         method:'GET'
     };
     useEffect(() => {
-        fetch('http://localhost:5001/projects',requestOptions)
+        fetch('http://localhost:5002/projects',requestOptions)
         .then((res)=>res.json())
         .then((data)=>{setProjects(data); 
             console.log(data);}) 
@@ -37,8 +37,6 @@ export const PinnedProjs: React.FC = () =>
     return(
             <div className="PinnedProjects"> 
             <div className="Selector">
-
-            
                 <h3 className="PinnedHead">Pinned Projects</h3>
                 <div className="ProjectsList">
                     <Carousel onSlid={changeProject} interval={null} fade={true} variant={"dark"} indicators={true}>
@@ -52,8 +50,8 @@ export const PinnedProjs: React.FC = () =>
                         ))}
                     </Carousel>
                 </div>
-                <div className="SelectedProjectContainer">
-                    <SelectedProjectComponent repoName = {SelectedProject} projectDesc = {SelectedDesc} link ={SelectedLink} image={SelectedImage}/>
+                <div className="SelectedProjectContainer" style={{backgroundImage:`url(${SelectedImage})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}} >
+                    <SelectedProjectComponent repoName = {SelectedProject} projectDesc = {SelectedDesc} link ={SelectedLink}/>
                 </div>
                     
                 </div>

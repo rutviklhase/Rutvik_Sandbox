@@ -23,6 +23,8 @@
     color: white;
     .Selector{
         background-color: black;
+        height: 85vh;
+        
         .PinnedHead{
             text-align: left;
             font-size: 3vh;
@@ -33,6 +35,10 @@
             width: 100%;
             max-width: 10vw;
             visibility: hidden;
+        }
+        .SelectedProjectContainer{
+            z-index: 9999;
+            height: 65vh;
         }
     }
     
